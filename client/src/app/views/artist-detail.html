@@ -1,0 +1,50 @@
+<div *ngIf="artist" class="artist-box">
+<div id="artist-head-card">
+    <div class="image">
+        <img src="{{url + 'get-image-artist/' + artist.image}}" *ngIf="artist.image && artist.image !== 'null'"/>
+    </div>
+    <div class="data">
+    <h1>{{artist.name}}</h1>
+    <p class="description">{{artist.description}}</p>
+
+    <a *ngIf="identity.role == 'ROLE_ADMIN'" [routerLink]="['/crear-album', artist._id]" class="btn btn-success">
+        Añadir Album
+    </a>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+    <div id="gallery-albums" *ngIf="albums">
+        <!--LISTAR LOS ALBUMS   albums-->
+
+        <ul class="album-list d-flex flex-wrap" *ngIf="albums">
+            <li *ngFor="let album of albums" class="col-lg-4 album-item">
+                <div class="album-image">
+                    <img src="{{url + 'get-image-album/' + album.image}}"/>
+                </div>
+                <div class="album-name">
+                    <p>
+                        <a  [routerLink]="['/album', album._id]">
+                    {{album.title}}
+                          </a>
+                     </p>
+
+                     <p>
+                        <a [routerLink]="['/artista', artist._id]">
+                    {{artist.name}}
+                          </a>
+                     </p>
+                     <div class="buttons" *ngIf="identity.role == 'ROLE_ADMIN'">
+                        <a [routerLink]="['/editar-album', album._id]" class="btn btn-sm btn-warning">Editar</a>
+                        <a  class="btn btn-sm btn-danger" (click)="onDeleteConfirm(album._id)">Borrar</a>
+                    </div> 
+                </div>            
+                <div class="seguro seguro-album" *ngIf="confirmado == album._id">
+                    <a (click)="onDeleteAlbum(album._id)" class="btn btn-sm btn-danger">Eliminar</a>
+                    <a (click)="onCancelAlbum()" class="btn btn-sm btn-success">Cancelar</a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>

@@ -1,0 +1,282 @@
+/*GLOBAL*/
+html, body {
+    background-color: #5c5353;
+    margin: 0;
+    height: 100%;
+}
+
+.actived{
+	border-bottom: 4px solid #84BD00;
+	padding-bottom: 4px;
+}
+
+.central{
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.seguro{
+    margin-top: -31px;
+    background: #222326;
+    height: 35px;
+    position: absolute;
+}
+
+.seguro-album{
+    margin-top: -37px;
+    margin-left: 0px;
+    position: absolute;
+    background: #222326;
+    height: 35px;
+}
+
+
+  
+/**barra lateral*/
+.head-title{
+	font-size: 20;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+	display: block;
+}
+
+.pagination li a {
+    font-size: 35px;
+    text-decoration: none;
+    
+  }
+  .pagination {
+    margin: 20px 0;
+  }
+
+.navigation{
+text-align: center;
+color: white;
+background: #1C1C1F;
+height: 100%;
+display: inline-block;
+vertical-align: top;
+}
+
+.navigation a{
+ color: #ddd;
+ margin-top: 20px;
+ margin-bottom: 20px;
+ display: block;
+ text-decoration: none;
+ 
+}
+
+.navigation a:hover{
+ color: white;
+
+}
+
+.navigation .fa{
+ font-size: 25px;
+ display: block;
+ width: 100%;
+}
+
+.user_logged{
+text-decoration: center;
+background: #1C1C1F;
+position:absolute;
+bottom:0px;
+border-top: 1px solid #444;
+width: 100%;
+height: 100%;
+}
+
+#user_logged .user-image{
+background: #eee;
+border-radius:100px;
+height:57px;
+width: 57px;
+margin:0px auto;
+margin-top: 15px;
+overflow: hidden;
+
+}
+
+#user_logged .user-image img{
+width: 57px;
+}
+
+.btn-logout {
+    cursor: pointer;
+}
+
+
+#user_logged .glyphicon-log-out{
+font-size: 16px;
+}
+/*DETALLE DE ARTISTA Y AMBUM*/
+#artist-head-card .image,
+#album-head-card .image{
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    float: left;
+    margin-right: 30px;
+}
+
+#artist-head-card .image img,
+#album-head-card .image img{
+    width: 130px;
+}
+
+
+/*ARTISTAS Y ALBUMS*/
+.artist_image_for_edit img,
+.album_image_for_edit img{
+    width: 150px;
+}
+
+.artist-list,
+.album-list{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 30px;
+    list-style: none;
+    min-height: 600px;
+}
+
+.artist-item,
+.album-item{
+    width: 23%;
+    margin: 0px;
+    padding: 0px;
+    height: 321px;
+    border: 1px solid #444;
+    margin-left: 20px;
+    margin-top: 20px;
+    background: #222326;
+}
+
+.artist-item .artist-image,
+.album-item .album-image{
+    height: 245px;
+    width: 100%;
+    overflow: hidden;
+    background: black;
+}
+
+.artist-item .artist-image img{
+    height: 100%;
+    min-width: 100%;
+  
+}
+
+.artist-item .artist-name,
+.album-item {
+    color: white;
+    padding: 10px;
+    background: #222326;
+}
+
+.album-name{
+    color: white;
+    padding: 4px;
+    background: #222326;
+}
+
+.artist-item .artist-name a,
+.album-item {
+    color: white;
+    text-decoration: none;
+}
+
+.album-name a{
+    color: white;
+}
+
+/*ALBUMS*/
+.album-item{
+ height: 378px; 
+ margin-bottom: 20px; 
+  
+}
+
+.album-item .album-image img{
+    width: 100%;
+}
+
+.album-list{
+    height: auto;
+    /*min-height: 800px; redimencionar entre albunes*/
+    margin-bottom: 710px;
+}
+
+.album-item .album-image{
+    height: 215px;
+}
+
+/*CANCIONES*/
+#song-list{
+    margin: 0px;
+    padding:0px;
+    min-height: 810px;
+    padding-bottom: 710px;
+}
+
+.song-item .title{
+    padding: 12px;
+}
+
+.song-item{
+    list-style: none;
+    border-bottom: 1px solid #444444;
+    padding-top: 20px;
+}
+
+.song-item .buttons{
+    float: right;
+}
+
+.song-item .btn-success{
+    margin-right: 10px;
+}
+
+.seguro-song{
+    right: 4px;
+    margin-top: -38px;
+    background: #eee;
+}
+
+/*player*/
+.player{
+    background: #1C1C1F;
+    position: fixed;
+    width: 90%;
+    bottom: 0;
+    padding: 20px;
+    margin-left: -15px;
+    border-left: 1px solid #444;
+    color:gray;
+}
+
+.player .album-image{
+    float: left;
+    width: 138px;
+    height: 119px;
+    overflow: hidden;
+}
+
+.player .album-image img{
+    height: 100%;
+}
+
+.player .audio-file{
+    width: 85%;
+    height: 40px;
+    margin-top: 24px;
+    margin-left: 10px;
+    float: left;
+}
+
+.player audio{
+    width: 100%;
+    height: 40px;
+}
