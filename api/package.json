@@ -7,7 +7,7 @@
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Zai Buendia",
+  "author": "Jose Luis Trujano De Olmos",
   "license": "MIT",
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
